@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JS Practice</title>
+	<style type="text/css">
+		div{
+			background: lightcyan;
+			padding: 50px;
+		}
+	</style>
+</head>
+<body>
+	<h1>This is Heading </h1>
+	<div class="headings">
+		<h1>Heading 1</h1>
+		<h2>Heading 2</h2>
+		<h3>Heading 3</h3>
+	</div>
+	<ul id="list">
+    	<li>Item 1</li>
+    	<li>Item 2</li>
+    	<li>Item 3</li>
+	</ul>
+	<hr>
+
+	<script>
+		// arrow function
+		// const sqr = num => num * num;  
+		// const sqr = (num) => (num * num);  
+		// const sqr = (num) => num * num; 
+		// const sqr = (num) => {return num * num}; 
+		// const sqr = num => {return num * num}; 
+		// document.write(sqr(6));
+
+
+		const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+		for(const number of numbers){
+			// document.write(number +" , ")
+			// document.write(numbers)
+		}
+
+
+		/* The for...of loop is primarily designed to iterate over iterable objects like arrays, you can use it with objects by converting the object's entries into an iterable using the Object.entries() method.*/
+
+		const person = {
+  			name: "Seboo",
+ 			age: 24,
+  			city: "Kasur"
+		};
+		const objEnt = Object.entries(person);
+		// document.write(objEnt) //[[name:"Seboo"],[age:24],[city:"Kasur"]]
+		for(const [key,value] of Object.entries(person)){
+			// document.write(`${key}: ${value} <br>`)
+		}
+
+		for (var i = 0; i < objEnt.length; i++) {
+			// document.write(`${objEnt[i]} <br>`)
+		}
+
+		// const name = "Pakistan"
+		// const name = ["P", "a", "k", "i", "s", "t", "a", "n"]
+		for(const i of name){
+			// document.write(`${i} <br>`)
+		}
+
+		const fruits = new Map([
+  			["apples", 500],
+  			["bananas", 300],
+  			["oranges", 200]
+		]);
+
+		for(const i of fruits){
+			// document.write(`${i} <br>`)
+		}
+
+		// document.write(fruits.entries())
+		for(const i of fruits.entries()){
+			// document.write(`${i} <br>`)
+		}
+
+
+
+
+
+		// Call BackFunction
+		function myDisplayer(something) {
+  			document.write(something);
+		}
+
+		function myCalculator(num1, num2, myCallback) {
+  			let sum = num1 + num2;
+  			myCallback(sum);
+		}
+
+		// myCalculator(5, 5, myDisplayer);
+		
+
+
+
+		
+
+	</script>
+</body>
+</html>
